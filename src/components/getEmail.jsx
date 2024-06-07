@@ -22,7 +22,7 @@ const GetEmail = () => {
           const headers = {
             Authorization: `Bearer ${accessToken}`,
           };
-          const response = await axios.get(`/api/email-details?limit=${emailsPerPage}`, {
+          const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/email-details?limit=${emailsPerPage}`, {
             headers,
           });
           setEmails(response.data);
