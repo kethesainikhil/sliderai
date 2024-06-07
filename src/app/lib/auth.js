@@ -5,6 +5,7 @@ const scopes = [
   "https://www.googleapis.com/auth/gmail.readonly",
   "https://www.googleapis.com/auth/userinfo.email",
   "https://www.googleapis.com/auth/gmail.send",
+  "https://mail.google.com"
 ];
 
 export const authOptions = {
@@ -38,19 +39,21 @@ export const authOptions = {
         console.log(error);
         return token;
       }
-    }
-},
+    },
     async session({ session, token }) {
       try {
         session.user.accessToken = token.accessToken;
         session.user.refreshToken = token.refreshToken;
         session.user.username = token.username;
+        console.log(session,"session")
         return session;
       } catch (error) {
         console.log(error);
         return session;
       }
     }
+},
+   
   
 };
 

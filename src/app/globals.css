@@ -31,3 +31,28 @@ body {
     text-wrap: balance;
   }
 }
+.email-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.email-card:hover {
+  background-color: #f0f0f0;
+}
+
+.email-header {
+  font-weight: bold;
+}
+
+.email-body {
+  color: #666;
+}
+
