@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Setup Guide
 
-## Getting Started
+For Backend Setup please visit this Link : https://github.com/kethesainikhil/slider_ai_backend.git
 
-First, run the development server:
+
+#FrontEnd Setup
+This guide will help you set up the project locally on your machine.
+
+## Step 1: Clone the Project
+
+Clone the project repository from the GitHub repository using the following command:
 
 ```bash
+git clone https://github.com/kethesainikhil/sliderai.git
+```
+step 2 : Navigate to the project directory and install dependencies
+
+```bash
+cd sliderai
+npm install
+```
+Step 3: Set Up Environment Variables
+Copy the .env.example file and rename it to .env.
+
+Open the .env file in your preferred text editor.
+
+Replace the placeholders with the appropriate values for the following variables:
+```bash
+GOOGLE_CLIENT_ID = <your_google_client_id>
+GOOGLE_CLIENT_SECRET = <your_google_client_secret>
+NEXTAUTH_SECRET = <your_nextauth_secret>
+NEXT_PUBLIC_BACKEND_URL = Your_Own_Backend_Url(Might include in .env.local if .env doesnot work)
+```
+Step 4: Start the Development Server
+Once you have set up the environment variables, you can start the development server using the following command:
+```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+step 5 : Access the Project at http:localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+step 6 : After Project Running 
 
-## Learn More
+Get Your own Gemini Ai Api Key by following these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1: Go to [Gemini AI Studio](https://aistudio.google.com/app/apikey)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2: Click on Create API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3: Select your project
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4: Finally, copy the generated API key and paste it here
