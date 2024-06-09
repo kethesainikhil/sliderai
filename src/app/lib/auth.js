@@ -22,6 +22,14 @@ export const authOptions = {
           scope: scopes.join(" "),
         },
       },
+      profile(profile) {
+        return {
+          id: profile.sub,
+          name: profile.name,
+          email: profile.email,
+          image: profile.picture,
+        };
+      },
     })
   ],
   secret: process.env.NEXTAUTH_SECRET,
@@ -29,10 +37,13 @@ export const authOptions = {
     async jwt({ token, account, user }) {
       try {
         if (account) {
-            console.log(account,"account details")
           token.accessToken = account.access_token;
           token.refreshToken = account.refresh_token;
           token.username = account.providerAccountId;
+          token.name = user.name;
+          token.email = user.email;
+          token.image = user.image;
+
         }
         return token;
       } catch (error) {
@@ -42,10 +53,12 @@ export const authOptions = {
     },
     async session({ session, token }) {
       try {
+        session.user.name = token.name;
+        session.user.email = token.email;
+        session.user.image = token.image;
         session.user.accessToken = token.accessToken;
         session.user.refreshToken = token.refreshToken;
         session.user.username = token.username;
-        console.log(session,"session")
         return session;
       } catch (error) {
         console.log(error);

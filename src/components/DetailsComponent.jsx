@@ -22,7 +22,7 @@ const DetailsComponent = ({id}) => {
   }
 
   return (
-    <div className='sm:mx-auto  flex flex-col sm:justify-center items-center'>
+    <div className='sm:mx-auto  flex flex-col justify-center items-center'>
       <h1>Email Details</h1>
       <div>
         <strong>From:</strong> {emailDetails.sender}

@@ -1,13 +1,13 @@
 
 import Image from "next/image";
-
+import HomeComponent from "../components/HomeComponent";
 export default function Home() {
   
 
   return (
 
-    <h1 className="text-3xl font-bold underline">
-      hello world
+    <h1 className= "font-bold">
+      <HomeComponent />
     </h1>
   );
 }

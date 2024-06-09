@@ -55,4 +55,55 @@ body {
 .email-body {
   color: #666;
 }
+.email-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.email-list {
+  flex: 1;
+  /* Add styling for your email list here */
+}
+
+.email-preview {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width:30%; /* Adjust the width as needed */
+  height: 60vh; /* Adjust the height as needed */
+  background-color : black; /* Example background color */
+  border: 1px solid #ccc;
+  overflow: auto; /* Add scroll if content overflows */
+  padding: 10px; /* Add padding as needed */
+  z-index: 1; /* Ensure the preview is above the email list */
+}
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #888;
+}
+
+.email-details-container.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.email-details-container.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+@media (max-width: 768px) {
+  .email-details-container {
+    width: 60vh !important;
+    background-color: gray;
+      }
+      
+}
+
 
