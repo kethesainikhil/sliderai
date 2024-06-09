@@ -56,15 +56,15 @@ const HomeComponent = () => {
         <div className='text-xl flex flex-col items-center justify-center text-center'>
           <div><Toaster/></div>
 
-            <h1>Classify Gmails Using Google API</h1>
+            <h1 className='sm:text-3xl text-lg '>Classify Gmails Using Google API</h1>
             <input
                 onChange={(e) => setApikey(e.target.value)}
                 type="text"
                 placeholder='Enter Your Google Api Key(required)'
-                className='border-2 w-1/2 h-12 px-6 text-black darK:text-black text-sm border-black rounded-2xl'
+                className='border-2 mt-10 sm:w-1/2 h-12  px-6 text-black darK:text-black text-sm border-black rounded-2xl'
             />
                 <button
-                className={`bg-green-500 hover:bg-black rounded-2xl px-4 py-2 ${isChecking && 'opacity-50 cursor-not-allowed'}`}
+                className={`bg-green-500 hover:bg-black rounded-2xl sm:px-4 px-2 mt-2 py-2 ${isChecking && 'opacity-50 cursor-not-allowed'}`}
                 onClick={handleLogin}
                 disabled={isChecking}
             >
@@ -74,10 +74,10 @@ const HomeComponent = () => {
                 className='mt-4 bg-blue-500 hover:bg-black rounded-2xl px-4 py-2'
                 onClick={handleShowSteps}
             >
-                {showSteps ? 'Hide Steps' : 'Show Steps'}
+                {showSteps ? 'Hide Steps' : 'Show Steps for API key'}
             </button>
             {showSteps && (
-                <div className="mt-4 flex flex-col items-center justify-center text-center space-y-4">
+                <div className="mt-4 flex text-sm  sm:text-lg flex-col items-center justify-center text-center space-y-4">
                     <div  onClick={handleStep1Click} className="cursor-pointer text-blue-500 hover:text-green-400 hover:underline">Step 1: Go to Google Cloud Console</div>
                     <div>Step 2: Click on Create API</div>
                     <div>Step 3: Select your project</div>
