@@ -86,7 +86,7 @@ const GetEmail = () => {
 </button>
             </div>
           </div>
-          {emails.length > 0 ? (
+          {emails?.length > 0 ? (
             <div className="">
               {emails.map((email, index) => (
                 <div className="hover:bg-gray-500 email-card" key={index} onClick={() => handleEmailClick(email)}>
@@ -106,10 +106,10 @@ const GetEmail = () => {
           )}
         </div>
       ) : (
-        <div>{session ? <div className='flex flex-col items-center text-3xl'>Getting Email details<div class="flex justify-center items-center h-screen">
-        <div class="animate-spin rounded-full h-12 w-12 border-4 border-gray-400 border-t-transparent">
-          <svg class="h-8 w-8 text-gray-300" viewBox="0 0 24 24">
-            <path d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM12 7C9.43 7 7 9.43 7 12C7 14.57 9.43 17 12 17C14.57 17 17 14.57 17 12C17 9.43 14.57 7 12 7ZM12 15C9.43 15 7 12.57 7 12C7 11.43 9.43 9 12 9C14.57 9 17 11.43 17 12C17 12.57 14.57 15 12 15Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <div>{session ? <div className='flex flex-col items-center text-3xl'>Getting Email details<div className="flex justify-center items-center h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-4 border-gray-400 border-t-transparent">
+          <svg className="h-8 w-8 text-gray-300" viewBox="0 0 24 24">
+            <path d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM12 7C9.43 7 7 9.43 7 12C7 14.57 9.43 17 12 17C14.57 17 17 14.57 17 12C17 9.43 14.57 7 12 7ZM12 15C9.43 15 7 12.57 7 12C7 11.43 9.43 9 12 9C14.57 9 17 11.43 17 12C17 12.57 14.57 15 12 15Z" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"></path>
           </svg>
         </div>
       </div> </div> : <div>Please login</div>}</div>

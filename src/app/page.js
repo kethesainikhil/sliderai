@@ -6,8 +6,10 @@ export default function Home() {
 
   return (
 
-    <h1 className= "font-bold">
+   <div>
+     <h1 className= "font-bold">
       <HomeComponent />
     </h1>
+   </div>
   );
 }
